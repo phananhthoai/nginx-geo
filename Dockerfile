@@ -20,6 +20,6 @@ EOF
 RUN geoipupdate
 COPY geo-python /geo-python
 COPY supervisord.conf /etc/supervisor/supervisord.conf
-RUN pip3 install -r /geo-python/requirement.txt
+RUN pip3 install -r /geo-python/requirements.txt
 
 CMD ["supervisord", "-c" ,"/etc/supervisor/supervisord.conf"]
